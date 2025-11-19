@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<title>Projects — Zulaikha</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- BACK BUTTON STYLE -->
+  <style>
+    .back-login-btn {
+      margin: 40px auto 60px;
+      padding: 12px 30px;
+      background: #4b3a33;
+      color: #fffaf5;
+      border: none;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+    }
+
+    .back-login-btn:hover {
+      background: #c4a484;
+      color: #4b3a33;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(196,164,132,0.5);
+    }
+  </style>
+</head>
+
+<style>
+/* BACKGROUND */
+body.projects-page {
+  background: url('about-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: brightness(0.9);
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin-top: 90px;
+  color: #4a3426;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* PROJECTS GRID */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 70%;
+  margin: 50px auto;
+}
+
+/* EACH PROJECT CARD */
+.project-card {
+  background: rgba(255, 248, 240, 0.9);
+  padding: 25px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #5d3f25;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  background: rgba(255, 248, 240, 1);
+}
+</style>
+
+</head>
+
+<body class="projects-page">
+
+<nav>
+  <a href="home.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="experience.html">EXPERIENCE</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+<h1 class="page-title">Projects</h1>
+
+<div class="projects-phone-container">
+
+  <div class="phone-frame">
+    <img src="project1.jpg" alt="Project 1">
+    <div class="phone-title">Departmental Records System</div>
+  </div>
+
+  <div class="phone-frame">
+    <img src="project2.jpg" alt="Project 2">
+    <div class="phone-title">C++ Student Record System</div>
+  </div>
+
+  <div class="phone-frame">
+    <img src="project3.jpg" alt="Project 3">
+    <div class="phone-title">Data Analysis Report</div>
+  </div>
+
+</div>
+ <!-- BACK TO LOGIN BUTTON -->
+  <button class="back-login-btn" onclick="window.location.href='index.html'">
+    Back to Log In Page
+  </button>
+
+</div>
+
+
+<footer>© 2025 Zulaikha Zambry</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome — Zulaikha Zambry</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --beige: #f8f3ed;
+  --light-brown: #e6d3c5;
+  --dark-brown: #4b3a33;
+  --soft-brown: #8c6e55;
+  --accent: #c4a484;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('background-image.JPG') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating Shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(196,164,132,0.3);
+  animation: float 6s infinite ease-in-out alternate;
+}
+.shape:nth-child(1){ width:150px; height:150px; top:15%; left:20%; animation-delay: 0s;}
+.shape:nth-child(2){ width:180px; height:180px; bottom:20%; right:15%; animation-delay: 2s;}
+.shape:nth-child(3){ width:100px; height:100px; top:70%; left:65%; animation-delay: 4s;}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-25px); }
+}
+
+/* Text Animation */
+@keyframes fadeDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* TEXT */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--dark-brown);
+  animation: fadeDown 1.5s ease forwards;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: white;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* BUTTON */
+button {
+  margin-top: 40px;
+  padding: 12px 35px;
+  background: var(--dark-brown);
+  color: var(--beige);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.4s;
+  animation: fadeUp 2s ease forwards;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--dark-brown);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(196,164,132,0.5);
+}
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 14px;
+  color: var(--dark-brown);
+}
+</style>
+</head>
+
+<body>
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+
+  <h1>Welcome to<br><b>Zulaikha Zambry</b>’s Space</h1>
+  <p>Building Success, One Step at a Time.</p>
+
+  <!-- BUTTON GOES TO home.html NOW -->
+  <button onclick="window.location.href='home.html'">Enter</button>
+
+  <footer>© 2025 Zulaikha Zambry</footer>
+</body>
+</html>

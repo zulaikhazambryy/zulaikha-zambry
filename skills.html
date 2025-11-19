@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<title>Skills — Zulaikha</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- BACK BUTTON STYLE -->
+  <style>
+    .back-login-btn {
+      margin: 40px auto 60px;
+      padding: 12px 30px;
+      background: #4b3a33;
+      color: #fffaf5;
+      border: none;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+    }
+
+    .back-login-btn:hover {
+      background: #c4a484;
+      color: #4b3a33;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(196,164,132,0.5);
+    }
+  </style>
+</head>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+/* BACKGROUND */
+body.skills-page {
+  background: url('about-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: brightness(0.9);
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin-top: 90px;
+  color: #4a3426;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* LAYOUT: SIDE BY SIDE */
+.chart-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  flex-wrap: wrap; /* phone friendly */
+}
+
+.chart-box {
+  background: rgba(255, 248, 240, 0.9);
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 400px;
+  text-align: center;
+}
+
+/* TITLE INSIDE BOX */
+.chart-box h2 {
+  color: #5d3f25;
+  margin-bottom: 15px;
+}
+</style>
+
+</head>
+
+<body class="skills-page">
+
+<nav>
+  <a href="home.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="experience.html">EXPERIENCE</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+<h1 class="page-title">Skills</h1>
+
+<!-- CHARTS SIDE BY SIDE -->
+<div class="chart-container">
+
+  <div class="chart-box">
+    <h2>Soft Skills</h2>
+    <canvas id="softChart"></canvas>
+  </div>
+
+  <div class="chart-box">
+    <h2>Hard Skills</h2>
+    <canvas id="hardChart"></canvas>
+  </div>
+
+</div>
+ <!-- BACK TO LOGIN BUTTON -->
+  <button class="back-login-btn" onclick="window.location.href='index.html'">
+    Back to Log In Page
+  </button>
+
+</div>
+
+<footer>© 2025 Zulaikha Zambry</footer>
+
+
+<script>
+/* --- SOFT SKILLS (bar chart) --- */
+new Chart(document.getElementById("softChart"), {
+  type: 'bar',
+  data: {
+    labels: ["Networking", "Innovative", "Leadership", "Adaptation"],
+    datasets: [{
+      data: [12, 14, 16, 20],
+      backgroundColor: [
+        "#d2b48c",  // light brown
+        "#b08b63",
+        "#8c6b46",
+        "#5d3f25"   // dark brown
+      ]
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+
+
+/* --- HARD SKILLS (pie chart) --- */
+new Chart(document.getElementById("hardChart"), {
+  type: 'pie',
+  data: {
+    labels: ["Data Analysis", "Information Retrieval", "Database Management"],
+    datasets: [{
+      data: [25, 12.5, 62.5],
+      backgroundColor: [
+        "#d2b48c",
+        "#b08b63",
+        "#5d3f25"
+      ]
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
+
